@@ -1,0 +1,33 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-icon icon ion-ios-minus-outline"
+    ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
+    <h1 class="title">Carrito de Compras</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="logout()">Logout</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <div class="card">
+      <div class="item item-text-wrap">
+
+      </div>
+    </div>
+    <a href="#/listaBebida">atras</a> 
+    <button class="button button-full button-balanced" ng-click="borrarCarrito()">
+      borrar carrito de compra
+    </button>
+    <p>Valor Total: {{ valorTotal }}</p>
+    <form role="form" name="addVideo" style="width:500px">
+      <ion-list show-delete="data.showDelete">
+        <ion-item class="item-avatar item-icon-right" ng-repeat="item in detalle"> 
+         <p>{{ item.nombre }} -> {{item.sugerencia}}</p>
+         <ion-delete-button class="ion-minus-circled" 
+         ng-click="onItemDelete(item)"></ion-delete-button>
+       </ion-item>
+     </ion-list>
+     <button class="button button-full button-positive" ng-click="submit()" style="width: 165px;">Enviar</button>
+   </form>
+
+ </ion-content>
+</ion-view>

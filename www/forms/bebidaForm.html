@@ -1,0 +1,26 @@
+<h1>{{$parent.settings.title }}</h1>
+
+<div class="form-group">
+	<label>Nombre: {{ detalle[0].nombres }}</label>
+	<input type="hidden" ng-model="bebida.nombre" value="{{detalle[0].nombres}}">
+</div><br>
+
+
+<div class="form-group">
+	<label >Descripción:{{ detalle[0].descripcion }}</label>
+	<input type="hidden" ng-model="bebida.descripcion" value="{{detalle[0].descripcion}}">
+</div><br>
+
+
+<div class="form-group">
+	<label>Valor: {{ detalle[0].valor }}</label>
+	<input type="hidden" ng-model="bebida.valor" value="">
+</div><br>
+
+<div class="form-group">
+	<label>Sugerencia:</label>
+	<textarea class="form-control" rows="3" ng-model="bebida.sugerencia" style="background: #f7f7f7;"></textarea>
+</div><br>
+
+
+<br><br><button class="button button-full button-positive" ng-click="submit($parent.bebida)" style="width: 165px;">Enviar</button>
