@@ -1,6 +1,6 @@
 angular.module('starter')
  
-//CONTROLADOR DE LOGIN
+//CONTROLADOR DE LOGIN 
 .controller('LoginCtrl', function($scope, AuthService, $ionicPopup, $state,$location) {
 //Objeto que tienes las variables del usuario email y password 
   $scope.user = {
@@ -37,7 +37,8 @@ angular.module('starter')
     correo: '',
     telefono: '',
     cedula: '',
-    password: ''
+    password: '',
+    password2: ''
   };
 
 

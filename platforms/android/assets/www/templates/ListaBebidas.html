@@ -1,0 +1,44 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <h1 class="title">Lista Bebidas</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="logout()">Logout</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <div class="card">
+      <div class="item item-text-wrap">
+      
+      </div>
+    </div>
+    <button class="button button-full button-positive" ng-click="obtenerCredencial()">
+      Entrar como Huesped
+    </button>
+    <button class="button button-full button-balanced" ng-click="getListaBebidas()">
+      Obtener Lista de Bebidas
+    </button>
+
+    <button class="button button-full button-positive" ng-click="getListaPlatos()">
+      Obtener Lista de Platos
+    </button>
+
+    <button class="button button-full button-balanced" ng-click="getListaMantenimiento()">
+      Obtener Lista de servicio de mantenimiento
+    </button>
+
+    <button class="button button-full button-positive" ng-click="getListaResepcion()">
+      Obtener Lista de servicio de recepción
+    </button>
+
+    <button class="button button-full button-balanced" ng-click="getListAmaLlave()">
+      Obtener Lista de servicio de ama de llave
+    </button>
+
+    <ion-list>
+	 	<ion-item class="item-avatar item-icon-right" ng-repeat="item in detalle" href="#/detalle/{{item.idproducto_servicios}}">
+	 		<p>{{ item.idproducto_servicios }} {{item.nombres}}</p>
+	 	</ion-item>
+	 </ion-list>
+
+  </ion-content>
+</ion-view>
